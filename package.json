@@ -1,0 +1,40 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "This is a boiler plate for a react project ",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-babel": "npm run build-babel-server && npm run build-babel-client",
+    "build-babel-server": "babel src/server --out-dir ./dist",
+    "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/server.js",
+    "clean": "rimraf dist node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anishamalde/react-boilerplate.git"
+  },
+  "author": "Anisha Malde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anishamalde/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/anishamalde/react-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "rimraf": "^2.6.3",
+    "webpack": "^3.12.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
